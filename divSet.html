@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>div元素设置</title>
+		<script type="text/javascript">
+			window.onload = function  () {
+				var oBtn = document.getElementsByTagName('button')[0];
+				
+				var oBoxE = document.getElementById('box2');
+				var oBoxS = document.getElementById('change');
+
+				var oDiv = document.getElementById('main');
+				var aRed = document.getElementsByTagName('a')[0];
+				var aYellow = document.getElementsByTagName('a')[1];
+				var aBlue = document.getElementsByTagName('a')[2];
+
+				var aWidth0 = document.getElementsByTagName('a')[3];
+				var aWidthT = document.getElementsByTagName('a')[4];
+				var aWidthS = document.getElementsByTagName('a')[5];
+
+				var	aHeight0 = document.getElementsByTagName('a')[6];
+				var	aHeightT = document.getElementsByTagName('a')[7];
+				var	aHeightS = document.getElementsByTagName('a')[8];
+
+				var oBtnT = document.getElementsByTagName('input')[0];
+				var oBtnF = document.getElementsByTagName('input')[1];
+				var oBtnZ = document.getElementsByTagName('input')[2];
+				var oBtnR = document.getElementsByTagName('input')[3];
+
+				oBtn.onclick = function(){
+					oBoxE.style.display = 'block';
+					oBoxS.style.display = 'block';
+				}
+				aRed.onclick = function(){
+					oDiv.style.background = 'red';
+				}
+				aYellow.onclick = function(){
+					oDiv.style.background = 'yellow';
+				}
+				aBlue.onclick = function(){
+					oDiv.style.background = 'blue';
+				}
+
+				aWidth0.onclick = function(){
+					oDiv.style.width = '200' + 'px';
+				}
+				aWidthT.onclick = function(){
+					oDiv.style.width = '300' + 'px';
+				}
+				aWidthS.onclick = function(){
+					oDiv.style.width = '400' + 'px';
+				}
+
+				aHeight0.onclick = function(){
+					oDiv.style.height = '200' + 'px';
+				}
+				aHeightT.onclick = function(){
+					oDiv.style.height = '300' + 'px';
+				}
+				aHeightS.onclick = function(){
+					oDiv.style.height = '400' + 'px';
+				}
+
+				oBtnT.onclick = function(){
+					oDiv.style.background = '#fff';
+					oDiv.style.width 	  = '150px';
+					oDiv.style.height     = '150px';
+					oDiv.style.left = '270px';
+				}
+
+				oBtnF.onclick = function(){
+					oBoxS.style.display = 'none';
+					oBoxE.style.display = 'none';
+				}
+
+			}
+		</script>
+		<style type="text/css">
+			body{
+				width: 				800px;
+				margin: 			20px auto;
+				text-align: 		center;
+			}
+			#box{
+				width: 				700px;
+				height: 			800px;
+				background: 		#efefef;
+				position: 			relative;
+			}
+			button{
+				font-size: 			20px;
+				width: 				100px;
+				height: 			40px;
+				border: 			none;
+				background: 		#f00;
+				color: 				#fff;
+				cursor: 			pointer;		
+			}
+			#main{
+				position: 			absolute;
+				left: 				270px;
+				width: 				150px;
+				height: 			150px;
+				border:     		4px solid #000;
+				margin:             20px auto;
+			}
+			#box2{
+				width: 				700px;
+				height: 			800px;
+				background: 		rgba(128,128,128,.4);
+				position: 			absolute;
+				top: 				0;
+				left: 				0;
+				display: 			none;
+			}
+			#change{
+				width: 				200px;
+				height: 			200px;
+				background: 		#fff;
+				border:             10px solid #9c949c;
+				position: 			absolute;
+				top: 				110px;
+				left: 				600px;
+				padding: 			10px 10px 0 10px;
+				font-size: 			14px;
+				display: 			none;
+			}
+			a{
+				width: 				27px;
+				height: 			32px;
+				display: 			inline-block;
+				margin-bottom: 		8px;
+				text-decoration: 	none;
+				line-height: 		32px;
+				font-weight: 		bold;
+			}
+			.red{
+				background: 		red;
+				color: 				#fff;
+			}
+			.yellow{
+				background: 		yellow;
+				color: 				#fff;
+			}
+			.blue{
+				background: 		blue;
+				color: 				#fff;
+			}
+			.number{
+				border: 			1px solid #acacac;
+				background: 		#efefef;
+				color: 				#847b84;
+			}
+			input{
+				width: 				60px;
+				height: 			30px;
+				color: 				#fff;
+				background: 		#002952;
+				border:    			none;
+				margin: 			2px;
+			}
+		</style>
+	</head>
+	<body>
+	 	<div id="box">
+	 		<h2>为下面的div设置样式</h2>
+	 		<button>点击设置</button>
+	 		<div id="main"></div>
+	 		<div id="box2"></div>
+	 		<div id="change">
+	 			<span>请选择背景色：</span>
+	 			<a href="#" class="red">红</a>
+	 			<a href="#" class="yellow">黄</a>
+	 			<a href="#" class="blue">蓝</a>
+	 			<br/>
+	 			<span>请选择宽度(px):</span>
+	 			<a href="#" class="number">200</a>
+	 			<a href="#" class="number">300</a>
+	 			<a href="#" class="number">400</a>
+	 			<br/>
+	 			<span>请选择高度(px):</span>
+	 			<a href="#" class="number">200</a>
+	 			<a href="#" class="number">300</a>
+	 			<a href="#" class="number">400</a>
+	 			<input type="button" value="恢复">
+	 			<input type="button" value="确定">
+	 			<br/>
+	 		</div>	
+	 	</div>
+	</body>
+</html>
