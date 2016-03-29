@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>for的图片应用</title>
+	<style type="text/css">
+		#div1{
+			width: 509px;
+			height: 458px;
+			border: 1px solid black;
+			margin: 0 auto;
+			position: relative;
+		}
+		.divs{
+			width: 50px;
+			height: 50px;
+			background: url(img/3.jpg) no-repeat;
+			position: absolute;
+			opacity:0;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oDiv1 = document.getElementById('div1');
+			var str='';
+
+			for(var i=0;i<90;i++)
+			{
+				str +='<div class="divs"></div>';
+			}
+
+			oDiv1.innerHTML += str;
+
+			var aDiv = oDiv1.getElementsByTagName('div');
+			var top = -1;
+			var left = 0;
+
+			for(var i=0;i<aDiv.length;i++)
+			{
+
+				left = i%10;
+				if(i%10==0)
+				{
+					top++;
+				}
+
+				aDiv[i].style.backgroundPosition = '-'+left*50+'px'+' '+'-'+top*50+'px';
+				aDiv[i].style.left = left*51+'px';
+				aDiv[i].style.top = top*51+'px';
+				aDiv[i].onmouseover = function(){
+					this.style.opacity = 1;
+				}
+			}
+		};
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>
